@@ -1,0 +1,2 @@
+data = read.table('cluster.csv', header = F)
+ggplot() + geom_line(aes(x = data$V1, y = data$V2), colour="1") + geom_line(aes(x = data$V1, y = data$V3, colour="C2")) + geom_line(aes(x = data$V1, y = data$V4, colour="C3")) + geom_line(aes(x = data$V1, y = data$V5, colour="C4")) + geom_line(aes(x = data$V1, y=data$V6, colour="C5")) + scale_colour_manual("cluster", values=c("C1"=1, "C2"=2, "C3"=3, "C4"=4, "C5"=5)) + labs(x = "hour", y = "proportion")
